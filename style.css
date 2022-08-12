@@ -21,7 +21,8 @@
 
   --size: 15px;
 
-  --font: "Inter", sans-serif;
+  --font1: "Inter", sans-serif;
+  --font2: "Lexend Deca", sans-serif;
 }
 
 * {
@@ -31,7 +32,7 @@
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font1);
   background-color: var(--p1);
   height: 100vh;
   width: 100vw;
@@ -44,12 +45,14 @@ body {
 main {
   background-color: var(--p2);
   min-width: 250px;
-  max-width: 800px;
+  max-width: 900px;
 
   display: flex;
   flex-direction: column;
 
-  border-radius: 8px;
+  border-radius: 0.5rem;
+
+  margin: 2rem;
 }
 
 picture {
@@ -72,12 +75,13 @@ img {
 
 .info h1 {
   color: var(--n1);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .info > h1 {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 .info > h1 > span {
@@ -86,64 +90,51 @@ img {
 
 .info p {
   color: var(--n3);
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.7;
   font-weight: 400;
 }
 
 .info > p {
   margin-bottom: 2rem;
+  display: inline-block;
 }
 
 .info ul li {
   list-style: none;
+  font-family: var(--font2);
 }
 
-.info ul li h2:first-of-type {
+.info ul li > h2 {
+  font-family: var(--font1);
   color: var(--n1);
-  font-size: 17px;
-  /* font-weight: 700; */
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 400;
 }
 
-.info ul li p:last-of-type {
+.info ul li > p {
   letter-spacing: 1px;
-  font-size: 9px;
+  font-size: 0.5625rem;
+  font-weight: 300;
 }
 
 .info li:not(:last-of-type) {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   main {
-    flex-direction: row-reverse;
+    max-height: 800px;
   }
-
-  picture {
-    flex-grow: 5;
-  }
-  picture,
-  img {
-    flex-grow: 5;
-    border-radius: 0 8px 8px 0;
-  }
-
   .info {
-    padding: 2.5rem 2rem;
-    text-align: left;
-  }
-
-  .info > h1 {
-    margin-bottom: 24px;
-  }
-
-  .info > p {
-    margin-bottom: 3rem;
+    padding: 2.25rem 2rem;
   }
 
   .info ul {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: center;
+    gap: 2rem;
   }
 
   .info li:not(:last-of-type) {
@@ -151,26 +142,29 @@ img {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 650px) {
+  main {
+    flex-direction: row-reverse;
+    max-height: auto;
+  }
+  picture,
+  img {
+    border-radius: 0 8px 8px 0;
+  }
+
   .info {
-    padding: 4rem 10rem 3rem 3rem;
+    padding: 3.5rem 3rem 3rem 3rem;
     text-align: left;
+    max-width: 48ch;
   }
 
   .info > h1 {
-    margin-bottom: 24px;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .info > p {
     margin-bottom: 3rem;
-  }
-
-  .info ul {
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-
-  .info li:not(:last-of-type) {
-    margin: 0;
+    font-size: 0.875rem;
   }
 }
