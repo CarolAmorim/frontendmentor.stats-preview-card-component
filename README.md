@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repository](https://github.com/CarolAmorim/frontendmentor.stats-preview-card-component)
-- Live Site URL: [Live site](https://carolamorim.github.io/frontendmentor.stats-preview-card-componenty/)
+- Live Site URL: [Live site](https://carolamorim.github.io/frontendmentor.stats-preview-card-component/)
 
 ### Built with
 
